@@ -1,0 +1,182 @@
+/* css/style.css - Estilos para el portal Real Madrid */
+ 
+/* CONTENEDOR HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #071a2b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+/* NAV PRINCIPAL */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    position: relative;
+}
+
+.nav ul li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 0;
+    display: block;
+}
+
+/* SUBMENÚS */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #222;
+    padding: 10px 0;
+    border-radius: 4px;
+    min-width: 180px;
+    z-index: 10;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.submenu a:hover {
+    background: #444;
+}
+
+/* MOSTRAR SUBMENÚ AL PASAR */
+.nav ul li:hover .submenu {
+    display: block;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+body {
+  margin: 0;
+  background: #f4f6fb;
+  color: #111;
+}
+
+.header img {
+  width: 56px;
+  height: 56px;
+}
+.logo{
+width: 10%;
+border: 10px solid #fff;
+}
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.nav {
+  background: #071a2b;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 180%;
+}
+.nav a {
+  color: #fff;
+  margin-right: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 22px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(7, 26, 43, 0.06);
+}
+.footer {
+  text-align: center;
+  color: #666;
+  padding: 14px;
+  margin-top: 16px;
+}
+
+/* Galería */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Tarjetas y listas */
+.item-card {
+  border: 1px solid #eef2f6;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.item-card img {
+  float: left;
+  width: 140px;
+  height: 88px;
+  object-fit: cover;
+  margin-right: 12px;
+  border-radius: 6px;
+}
+
+/* Tabla CV */
+.table-cv {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-cv th,
+.table-cv td {
+  border: 1px solid #e8eef6;
+  padding: 8px;
+  text-align: left;
+}
+.table-cv th {
+  background: #f7fafc;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.1rem;
+  }
+  .header img.logo {
+    width: 44px;
+    height: 44px;
+  }
+  .gallery-grid img {
+    height: 120px;
+  }
+  .item-card img {
+    display: block;
+    float: none;
+    width: 100%;
+    height: 160px;
+    margin: 0 0 12px 0;
+  }
+}
